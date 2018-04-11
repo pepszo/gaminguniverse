@@ -21,6 +21,6 @@
             </div>
           </li>
         </ul>
-        <?php  echo "<a class=\"btn btn-outline-success\" href=\"logout\">Se déconnecter</a>"; ?>
+        <?php  echo "<a class=\"btn btn-outline-success\" href=\"login\">S'identifier</a>"; ?>
       </div>
     </nav>
