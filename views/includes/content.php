@@ -1,3 +1,7 @@
 <?php
-    echo $content
+if (!empty($error)) {
+    include 'error.php';
+}
 ?>
+<?= $content ?>
+</div>

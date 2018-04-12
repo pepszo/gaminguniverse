@@ -21,6 +21,39 @@
             </div>
           </li>
         </ul>
-        <?php  echo "<a class=\"btn btn-outline-success\" href=\"login\">S'identifier</a>"; ?>
+        <?php
+        ob_start();
+        ?>
+        <a class="btn btn-outline-light" href="signup" role="button">S'inscrire</a>
+        &nbsp;
+        <a class="btn btn-outline-light" href="login" role="button">S'identifier</a>
+        <?php
+          $disconnected = ob_get_clean();
+          if(empty($_SESSION['login'])){
+            echo $disconnected;
+          }
+        ?>
+        <?php
+          ob_start();
+        ?>
+          <img src="/img/cart_icon.png" width="25" height="25" alt="cart" />
+          &nbsp;
+          &nbsp;
+        <?php
+          $cart = ob_get_clean();
+          ob_start();
+        ?>
+          <a class="btn btn-secondary" href="profile" role="button"><?php echo $_SESSION['login']?></a>
+          &nbsp;
+          <a class="btn btn-outline-light" href="logout">Se déconnecter</a>
+        <?php
+          $connected = ob_get_clean();
+          if(!empty($_SESSION['login'])){
+              if(strtolower($_SESSION['login'])!='admin'){
+                  echo $cart;
+              }
+            echo $connected;
+          }
+        ?>
       </div>
     </nav>
