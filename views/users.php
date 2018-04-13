@@ -24,7 +24,7 @@ ob_start();
                     <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#modal<?= $user['id']?>">
                         Supprimer
                     </button>
-                    <?php include 'includes/delete_model.php' ?>
+                    <?php include 'includes/delete_user.php' ?>
                     <?php endif ?>
                 </div>
             </td>
