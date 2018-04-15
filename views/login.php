@@ -1,8 +1,10 @@
 <?php ob_start() ?>
 <div class="container-fluid text-center logbox" >
     <form method="post" class="form-signin">
-      <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+      <img class="mb-4" 
+      src="/img/icon.png" 
+      alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
       <label for="inputEmail" class="sr-only">Identifiant</label>
       <input type="text" name="login" id="inputEmail" class="form-control" placeholder="Identifiant" required="" autofocus="">
       <label for="inputPassword" class="sr-only">Mot de passe</label>

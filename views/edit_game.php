@@ -14,6 +14,10 @@ ob_start();
             <label for="price">Prix</label>
             <input type="text" class="form-control" id="price" name="price" value=<?php if(isset($game)) { echo $game['price']; }?>>
         </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" name="description" value=<?php if(isset($game)) { echo $game['description']; }?>>
+        </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
     </form>
 </div>

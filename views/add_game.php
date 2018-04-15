@@ -15,6 +15,10 @@ ob_start();
             <label for="price">Prix</label>
             <input type="text" class="form-control" id="price" name="price">
         </div>
+        <div class="form-group">
+            <label for="price">Description</label>
+            <input type="text" class="form-control" id="Description" name="Description">
+        </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
     </form>
 </div>

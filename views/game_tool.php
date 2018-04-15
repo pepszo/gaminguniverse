@@ -4,6 +4,7 @@ ob_start();
 <table class="table">
     <thead>
         <tr>
+            <th scope="col">Apercu</th>
             <th scope="col">#</th>
             <th scope="col">Titre</th>
             <th scope="col">Prix</th>
@@ -13,6 +14,7 @@ ob_start();
     <tbody>
       <?php foreach($games as $game):?>
       <tr>
+          <td><img src="/img/games/game<?=$game['id']?>" style="width: 3rem;"/></td>
           <th scope="row"><?=$game['id']?></th>
           <td><?=$game['title']?></td>
           <td><?=$game['price']?>€</td>
@@ -27,6 +29,11 @@ ob_start();
                       Supprimer
                   </button>
                   <?php include 'includes/delete_game.php' ?>
+                  &nbsp;
+                  <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter<?= $game['id']?>">
+                  Ajoutez une image
+                  </button>
+                   <?php include 'includes/img_jeux.php' ?>      
               </div>
           </td>
 

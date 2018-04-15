@@ -10,8 +10,12 @@
             <a class="nav-link" href="index">Accueil <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="shop">Boutique</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="about">A propos</a>
           </li>
+          
           <?php
           ob_start();
           ?>       
@@ -45,7 +49,7 @@
         <?php
           ob_start();
         ?>
-          <img src="/img/cart_icon.png" width="25" height="25" alt="cart" />
+          <a href="order"><img href="order" src="/img/cart_icon.png" width="25" height="25" alt="cart"></a>
           &nbsp;
           &nbsp;
         <?php
