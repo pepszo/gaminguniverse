@@ -10,10 +10,11 @@ else{
         $gtitle = $_POST['gtitle']; 
         $price = $_POST['price'];
         $description = $_POST['description'];
-                $values = array('title' => $gtitle, 'price' => $price);
+        $values = array('title' => $gtitle, 'price' => $price, 'description' => $description);
                 $game = newGame($values);
-                header('Location: game_tool');    
-                }
+                header('Location: game_tool');
                 exit();
-        }
+                }
+    
+}
 ?>

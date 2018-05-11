@@ -8,17 +8,17 @@ ob_start();
         <?php endif?>
         <div class="form-group">
             <label for="gtitle">Titre</label>
-            <input type="text" class="form-control" id="gtitle" name="gtitle" value=<?php if(isset($game)) { echo $game['title']; }?>>
+            <input type="text" class="form-control" id="gtitle" name="gtitle" value="<?php if(isset($game)) { echo $game['title']; }?>">
         </div>
         <div class="form-group">
             <label for="price">Prix</label>
-            <input type="text" class="form-control" id="price" name="price" value=<?php if(isset($game)) { echo $game['price']; }?>>
+            <input type="text" class="form-control" id="price" name="price" value="<?php if(isset($game)) { echo $game['price']; }?>">
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <input type="text" class="form-control" id="description" name="description" value=<?php if(isset($game)) { echo $game['description']; }?>>
+            <textarea class="form-control" id="description" name="description"><?php if(isset($game)) { echo $game['description']; }?></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <button type="submit" class="btn btn-info">Enregistrer</button>
     </form>
 </div>
 <?php

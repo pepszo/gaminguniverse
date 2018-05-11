@@ -11,7 +11,7 @@ function getUser($login) {
 }
 function getUsers() {
     $db = getDb();
-    $reponse = $db->query('SELECT * FROM USER');
+    $reponse = $db->query('SELECT r.name, u.* FROM user AS u JOIN role AS r ON role_id = r.id; ');
     $donnees = $reponse->fetchAll();
     $reponse->closeCursor(); // Termine le traitement de la requête
     return $donnees;

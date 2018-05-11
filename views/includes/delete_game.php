@@ -14,7 +14,7 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <form action="delete_game">
             <input type="hidden" name="id" value=<?=$game['id']?>>
-            <button class="btn btn-outline-danger" type="submit">Supprimer</button>
+            <button class="btn btn-danger" type="submit">Supprimer</button>
         </form>
       </div>
 

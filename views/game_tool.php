@@ -22,18 +22,16 @@ ob_start();
               <div class="row">
                   <form action="game">
                       <input type="hidden" name="id" value=<?=$game['id']?>>
-                      <button class="btn btn-outline-success" type="submit">Editer</button>
+                      <button class="btn btn-success" type="submit">Editer</button>
                   </form>
-                  &nbsp;
-                  <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#modal<?= $game['id']?>">
-                      Supprimer
-                  </button>
                   <?php include 'includes/delete_game.php' ?>
                   &nbsp;
-                  <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter<?= $game['id']?>">
+                  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter<?= $game['id']?>">
                   Ajoutez une image
                   </button>
-                   <?php include 'includes/img_jeux.php' ?>      
+                   <?php include 'includes/img_jeux.php' ?> 
+                  &nbsp;
+                  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal<?= $game['id']?>">X</button>     
               </div>
           </td>
 

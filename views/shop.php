@@ -17,7 +17,7 @@ ob_start();
           <td><?=$game['price']?>€</td>
           <td>
               <div class="row">
-                  <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#description<?= $game['id']?>">
+                  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#description<?= $game['id']?>">
                   Voir la description          
                   </button>
                   <?php include 'includes/description.php' ?>
@@ -25,9 +25,10 @@ ob_start();
                   <?php
                     ob_start();
                   ?>
-                  <form action="">
-                      <input type="hidden" name="id" value=<?=$game['id']?>>
-                      <button class="btn btn-outline-success" type="submit">Ajoutez au panier</button>
+                  <form method="post" action="add_cart">
+                      <input type="hidden" name="id" value="<?=$game['id']?>">
+                      <input type="hidden" name="price" value="<?=$game['price']?>">
+                      <button class="btn btn-info" type="submit">Ajoutez au panier</button>
                   </form>
                   <?php
                   $panier = ob_get_clean();

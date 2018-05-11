@@ -4,4 +4,3 @@ if (!empty($error)) {
 }
 ?>
 <?= $content ?>
-</div>

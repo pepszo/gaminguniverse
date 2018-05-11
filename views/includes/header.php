@@ -6,14 +6,10 @@
 
       <div class="navbar-collapse collapse show" id="navbarsExample04" style="">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active <?php if($title =='Accueil'){echo 'active';}?>">
-            <a class="nav-link" href="index">Accueil <span class="sr-only">(current)</span></a>
+          <li class="nav-item active <?php if($title =='Accueil'){echo 'active';}?>"> 
           </li>
           <li class="nav-item">
             <a class="nav-link" href="shop">Boutique</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about">A propos</a>
           </li>
           
           <?php
@@ -24,7 +20,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdown04">
               <a class="dropdown-item" href="users">Utilisateurs</a>
               <a class="dropdown-item" href="game_tool">Jeux</a>
-              <a class="dropdown-item" href="#">Commandes</a>
+              <a class="dropdown-item" href="order">Commandes</a>
             </div>
           </li>
           <?php
@@ -34,6 +30,14 @@
          }
           ?>    
         </ul>
+        <SCRIPT LANGUAGE="JavaScript">
+            var today;
+            today = new Date();
+            document.write("<font color=\"white\">Nous sommes le ", today.getDate(),"/",today.getMonth()+1,"/",today.getFullYear())
+            document.write(", Il est ",today.getHours(),"h",today.getMinutes(),"</font>" );
+        </SCRIPT>
+          &nbsp;
+          &nbsp;
         <?php
         ob_start();
         ?>
@@ -49,14 +53,14 @@
         <?php
           ob_start();
         ?>
-          <a href="order"><img href="order" src="/img/cart_icon.png" width="25" height="25" alt="cart"></a>
+          <a href="cart"><img href="cart" src="/img/cart_icon.png" width="25" height="25" alt="cart"></a>
           &nbsp;
           &nbsp;
         <?php
           $cart = ob_get_clean();
           ob_start();
         ?>
-          <a class="btn btn-secondary" href="profile" role="button"><?php echo $_SESSION['login']?></a>
+          <a class="btn btn-outline-light" href="profile" role="button"><?php echo $_SESSION['login']?></a>
           &nbsp;
           <a class="btn btn-outline-light" href="logout">Se déconnecter</a>
         <?php

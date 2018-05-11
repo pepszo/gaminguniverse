@@ -19,6 +19,7 @@ ob_start();
                     <form action="user">
                         <input type="hidden" name="id" value=<?=$user['id']?>>
                         <button class="btn btn-outline-success" type="submit">Editer</button>
+                    &nbsp;    
                     </form>
                     <?php if($_SESSION['login'] != $user['login']):?>
                     <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#modal<?= $user['id']?>">
