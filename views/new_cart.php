@@ -5,8 +5,8 @@ ob_start();
   <div class="container">
   <h1 class="display-4">AH! Visiblement vous n'aviez pas de panier!</h1>
     <hr class="my-4">
-  <p class="lead">Pas de problème, un nouveau vient d'être créé, vous pouvez désormais retourner à l'accueil et ajouter vos objets au panier.</p>
-  <a class="btn btn-primary btn-lg" href="index" role="button">Accueil</a>
+  <p class="lead">Un panier vient d'être créé, vous pouvez retourner à la liste des jeux.</p>
+  <a class="btn btn-primary btn-lg" href="shop" role="button">Boutique</a>
   </div>
 
 <?php

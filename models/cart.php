@@ -36,8 +36,7 @@ function cartQt($id){
       $reponse = $db->prepare("SELECT COUNT(*) FROM book_item where book_id= :id");
       $reponse->execute(array('id' => $id));
       $count = $reponse->fetchAll();
-      $reponse->closeCursor();
-//J'ai eu pas mal de soucis avec cette fonction, je l'ai donc laissé tombé au profit d'un simple count($items) dans cart.php (controllers)      
+      $reponse->closeCursor();     
       return $count;
   }
 //fonction supprimant un objet du panier sur base de l'id de l'objet
@@ -47,4 +46,5 @@ function removeFromId($id){
       $response->execute(array('id' => $id));
       $response->closeCursor(); // Termine le traitement de la requête
 }
-?>
+
+

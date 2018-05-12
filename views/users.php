@@ -18,7 +18,7 @@ ob_start();
                 <div class="row">
                     <form action="user">
                         <input type="hidden" name="id" value=<?=$user['id']?>>
-                        <button class="btn btn-outline-success" type="submit">Editer</button>
+                        <button class="btn btn-outline-info" type="submit">Editer</button>
                     &nbsp;    
                     </form>
                     <?php if($_SESSION['login'] != $user['login']):?>

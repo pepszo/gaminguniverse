@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 11 mai 2018 à 17:50
+-- Généré le :  sam. 12 mai 2018 à 22:22
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.3
 
@@ -65,8 +65,15 @@ CREATE TABLE `item` (
 --
 
 INSERT INTO `item` (`id`, `title`, `price`, `description`) VALUES
-(9, 'Far Cry 5', 59.99, 'Description : Far Cry 5 est un jeu d\'action / aventure jouable en solo. Bienvenue à Hope County dans le Montana, terre de liberté et de bravoure qui abrite un culte fanatique prêchant la fin du monde : Eden’s Gate. Défiez son chef, Joseph Seed, et ses frères et soeur, et libérez les citoyens.'),
-(10, 'Assassin\'s Screed Origins', 64.99, 'Tu pue');
+(1, 'The Witcher 3 : Wild Hunt', 19.99, 'The Witcher 3 : Wild Hunt est un Action-RPG se déroulant dans un monde ouvert. Troisième épisode de la série du même nom, inspirée des livres du polonais Andrzej Sapkowski, cet opus relate la fin de l\'histoire de Geralt de Riv.'),
+(2, 'Far Cry 5', 49.99, 'Far Cry 5 est un jeu d\'action / aventure jouable en solo. Bienvenue à Hope County dans le Montana, terre de liberté et de bravoure qui abrite un culte fanatique prêchant la fin du monde : Eden’s Gate. Défiez son chef, Joseph Seed, et ses frères et soeur, et libérez les citoyens.'),
+(3, 'Assassin\'s Creed Origins', 39.99, 'Assassin\'s Creed Origins est un action RPG en monde ouvert incluant des mécaniques d\'infiltration. Le titre vous fait visiter les terres mystérieuses de l\'Egypte antique dans la peau de Bayek, nouveau héros d\'un épisode nous dévoilant les origines de la création de la confrérie des assassins chère à la série phare d\'Ubisoft.'),
+(4, 'Dragon Ball FighterZ', 50.99, 'Dragon Ball FighterZ est un jeu de combat 2D développé par Arc System Works et édité par Bandai Namco. Cette nouvelle adaptation de la franchise Dragon Ball met en scène les personnages iconiques de la série dans des affrontements explosifs en 3 versus 3.'),
+(5, 'Final Fantasy XV', 39.99, 'Final Fantasy XV est un jeu de rôle japonais. Le joueur y suit les aventures de Noctis, un jeune homme taciturne et héritier du trône. Il voyagera avec ses compagnons dans un monde à la fois moderne et fantastique.'),
+(6, 'Dark Souls Remastered', 19.99, 'Dark Souls Remastered sur PC est un jeu de rôle orienté action très difficile se déroulant dans un univers infesté de démons. Dans la peau d\'un mort-vivant, le joueur doit se battre contre de nombreux types d\'ennemis et de boss pour avoir une chance de retourner dans le monde des hommes. 10 classes de personnages et diverses techniques sont disponibles pour tenter de relever les défis extrêmement relevés qui se dressent à tout moment sur notre route en solo comme en multi.'),
+(7, 'Call of Duty : WWII', 47.99, 'Call of Duty : WWII sur PC est un jeu d\'action FPS du studio Sledgehammer Games. Pour cet opus, les développeurs ont opéré un retour aux sources de la saga en traitant la période historique de la Seconde Guerre mondiale. Cette fois-ci, exit les conflits futuristes et manichéens et place à un traitement plus réaliste et viscéral de ce conflit qui a chamboulé le monde entier.'),
+(8, 'FIFA 18', 43.95, 'FIFA 18 est un jeu de simulation de football sur PC édité par Electronic Arts. Le mode aventure promet d\'être retravaillé en profondeur, tout en faisant suite à celui du précédent opus. Le championnat chinois fera également son apparition pour la première fois, sans oublier les traditionnelles améliorations apportées aux graphismes et au gameplay, ainsi que le retour de Pierre Ménès et Hervé Mathoux aux commentaires.'),
+(9, 'A Way Out', 29.99, ' A Way Out est un jeu d\'action en coopération, jouable en ligne ou en local, en écran splitté. Dans cette aventure, les deux joueurs incarnent Leo et Vincent, deux prisonniers qui vont se rencontrer et coopérer pour s\'évader. Le titre mélange gameplay coop en temps réel et asymétrique.');
 
 -- --------------------------------------------------------
 
@@ -125,8 +132,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `login`, `password`, `role_id`) VALUES
 (1, 'admin', '$2y$10$cVF1uw5wwMtEn/6tNp58DOEgMLteib4AtB/4cJ9fAMTMnUBdHkcdW', 1),
-(2, 'test', '$2y$10$he6z5xNN/.j0JJhmar1Z0.QQOxaJfdPQ0RuKDlC0vaaLGXKx.ZHsy', 2),
-(3, 'test2', '$2y$10$4Xi7MyMjcDHX/GM6gvsybu7LnzWErS/S5nBRb3gFrTrrWJbaafyDO', 2);
+(2, 'toto', '$2y$10$Fm2xj6YbrhhGxlPt83yMUeLUn.RgXovtcFQfoORsUIZ4FJIV.WWwq', 2);
 
 --
 -- Index pour les tables déchargées
@@ -183,7 +189,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `book`
 --
 ALTER TABLE `book`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `book_item`
@@ -195,7 +201,7 @@ ALTER TABLE `book_item`
 -- AUTO_INCREMENT pour la table `item`
 --
 ALTER TABLE `item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT pour la table `role`
@@ -207,13 +213,13 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT pour la table `status`
 --
 ALTER TABLE `status`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Contraintes pour les tables déchargées
@@ -223,21 +229,15 @@ ALTER TABLE `user`
 -- Contraintes pour la table `book`
 --
 ALTER TABLE `book`
-  ADD CONSTRAINT `book_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `book_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `book_ibfk_2` FOREIGN KEY (`status_id`) REFERENCES `status` (`id`);
 
 --
 -- Contraintes pour la table `book_item`
 --
 ALTER TABLE `book_item`
-  ADD CONSTRAINT `book_item_ibfk_1` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`),
+  ADD CONSTRAINT `book_item_ibfk_1` FOREIGN KEY (`book_id`) REFERENCES `book` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `book_item_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `item` (`id`);
-
---
--- Contraintes pour la table `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

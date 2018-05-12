@@ -32,7 +32,7 @@ ob_start(); ?>
   <p class="font-weight-bold" style ="text-align: right">TOTAL&nbsp;&nbsp;</p>
   <p style ="text-align: right"><?=$total?>€&nbsp;&nbsp;</p>
 
-  <form style="text-align: right" method="get" action="">
+  <form style="text-align: right" method="get" action="payment">
     <input name="id" type="hidden" value="<?=$item['book_id']?>">
     <input type="submit" value="Payer" class="btn btn-info">
   </form>

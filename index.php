@@ -6,7 +6,7 @@ $uri = parse_url($uri, PHP_URL_PATH);
 $segments = array_filter(explode('/', $uri));
 if (count($segments) == 0 or $segments[0] === 'index')
 {
-    $file = 'home';
+    $file = 'shop';
 }
 else
 {
